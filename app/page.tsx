@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect } from "react";
 import axios from "axios";
 
-export default async function Home() {
-  const { data } = await axios.get("api/download");
+export default function Home() {
+  useEffect(() => {
+    axios.get("/api/download").then(({ data }) => {
+      console.log(data);
+    });
+  }, []);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
