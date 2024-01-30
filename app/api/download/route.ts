@@ -7,7 +7,7 @@ import { put } from "@vercel/blob";
 export async function GET(request: NextRequest) {
   unstable_noStore();
   // const youtubeLink = "https://www.youtube.com/watch?v=3XMQsDfipRE";
-  const youtubeLink = "https://www.youtube.com/watch?v=iv-C4CVGk28";
+  const youtubeLink = "https://www.youtube.com/watch?v=OB8rA_Qpa5o";
 
   // let to_stream = fs.createWriteStream("video.mp4");
   // let written = 0;
