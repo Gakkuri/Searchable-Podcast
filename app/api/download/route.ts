@@ -4,20 +4,20 @@ import ytdl from "ytdl-core";
 import { put } from "@vercel/blob";
 
 export async function GET(request: NextRequest) {
-  let to_stream = fs.createWriteStream("video.mp4");
-  let written = 0;
-  let info = await ytdl.getInfo("https://www.youtube.com/watch?v=iv-C4CVGk28");
+  // let to_stream = fs.createWriteStream("video.mp4");
+  // let written = 0;
+  // let info = await ytdl.getInfo("https://www.youtube.com/watch?v=iv-C4CVGk28");
 
-  console.log(info.formats);
+  // console.log(info.formats);
 
-  let format = ytdl.chooseFormat(info.formats, {
-    quality: "highestaudio",
-    filter: "audioonly",
-  });
-  console.log(format);
-  let size = +format.contentLength;
+  // let format = ytdl.chooseFormat(info.formats, {
+  //   quality: "highestaudio",
+  //   filter: "audioonly",
+  // });
+  // console.log(format);
+  // let size = +format.contentLength;
 
-  console.log(size);
+  // console.log(size);
   let stream = await ytdl("https://www.youtube.com/watch?v=iv-C4CVGk28", {
     quality: "highestaudio",
     filter: "audioonly",
